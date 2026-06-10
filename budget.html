@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner - TravelNest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2a9d8f">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="navbar-logo">🌴 TravelNest</a>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Trip Budget Planner</h1>
+          <p>Plan your trip costs before you go</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+
+          <div class="form-group">
+            <label for="dest-input">Destination</label>
+            <input type="text" id="dest-input" placeholder="e.g. Bali">
+          </div>
+
+          <div class="form-group">
+            <label for="days-input">Number of Days</label>
+            <input type="number" id="days-input" placeholder="e.g. 7" min="1">
+          </div>
+
+          <div class="form-group">
+            <label for="budget-input">Daily Budget (USD)</label>
+            <input type="number" id="budget-input" placeholder="e.g. 50" min="1">
+          </div>
+
+          <button class="btn-primary" onclick="calculateBudget()">Calculate</button>
+
+          <div class="budget-result" id="budget-result">
+            <h3 id="result-title"></h3>
+            <span class="budget-status" id="budget-status"></span>
+            <p id="result-total"></p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <button class="btn-secondary" style="margin-top: 1rem;" onclick="saveTrip()">Save Trip</button>
+          </div>
+
+          <div class="saved-list">
+            <h3>Saved Trips</h3>
+            <div id="saved-trips"></div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3>🌴 TravelNest</h3>
+            <p>Your ultimate travel planning companion.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="footer-newsletter">
+            <h4>Stay inspired</h4>
+            <div class="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Your email address">
+              <button class="btn-newsletter" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+            <p id="newsletter-msg"></p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 TravelNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/budget.js"></script>
+  </body>
+</html>

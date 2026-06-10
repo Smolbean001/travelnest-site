@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Mood - TravelNest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2a9d8f">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="navbar-logo">🌴 TravelNest</a>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Travel Mood</h1>
+          <p>Set the vibe and track your travel dreams</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+
+          <h2>🎵 Ambient Sounds</h2>
+          <p style="color: var(--muted); margin-bottom: 1rem;">Click a sound to play. Click again to stop.</p>
+          <div class="sound-buttons">
+            <button class="sound-btn" onclick="toggleSound('beach')">🌊 Beach Waves</button>
+            <button class="sound-btn" onclick="toggleSound('forest')">🌿 Forest</button>
+            <button class="sound-btn" onclick="toggleSound('rain')">🌧️ Rain</button>
+            <button class="sound-btn" onclick="toggleSound('city')">🏙️ City</button>
+          </div>
+
+          <h2 style="margin-top: 2rem;">📍 Destination Tracker</h2>
+          <p style="color: var(--muted); margin-bottom: 1rem;">Mark destinations as visited or planned.</p>
+          <div id="mood-destinations"></div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3>🌴 TravelNest</h3>
+            <p>Your ultimate travel planning companion.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="footer-newsletter">
+            <h4>Stay inspired</h4>
+            <div class="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Your email address">
+              <button class="btn-newsletter" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+            <p id="newsletter-msg"></p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 TravelNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mood.js"></script>
+  </body>
+</html>

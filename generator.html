@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Generator - TravelNest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2a9d8f">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="navbar-logo">🌴 TravelNest</a>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Random Trip Generator</h1>
+        <p>Not sure where to go? Let us decide!</p>
+      </div>
+    </section>
+
+    <main>
+      <section class="section">
+        <div class="container">
+
+          <div class="form-group">
+            <label for="type-select">Travel Type</label>
+            <select id="type-select">
+              <option value="all">Any</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="cultural">Cultural</option>
+              <option value="adventure">Adventure</option>
+              <option value="nature">Nature</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget-select">Budget</label>
+            <select id="budget-select">
+              <option value="all">Any</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <button class="btn-primary btn-pulse" onclick="generateTrip()">Surprise Me! 🎲</button>
+
+          <div class="generator-result" id="generator-result">
+            <h3 id="gen-name"></h3>
+            <p id="gen-country"></p>
+            <p id="gen-desc"></p>
+            <button class="btn-secondary" style="margin-top: 1rem;" onclick="saveToWishlist()">Add to Wishlist ❤️</button>
+          </div>
+
+          <div class="saved-list" style="margin-top: 2rem;">
+            <h3>My Wishlist</h3>
+            <div id="wishlist"></div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3>🌴 TravelNest</h3>
+            <p>Your ultimate travel planning companion.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="footer-newsletter">
+            <h4>Stay inspired</h4>
+            <div class="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Your email address">
+              <button class="btn-newsletter" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+            <p id="newsletter-msg"></p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 TravelNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/generator.js"></script>
+  </body>
+</html>

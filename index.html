@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TravelNest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2a9d8f">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="navbar-logo">🌴 TravelNest</a>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h1>Explore the World <span class="text-accent">Your Way</span></h1>
+            <p>Plan your dream trips, discover amazing destinations, and track your travel budget — all in one place.</p>
+            <a href="destinations.html" class="btn-primary">Explore Destinations</a>
+          </div>
+          <div class="hero-image">
+            <img src="images/hero.jpg" alt="Travel destination">
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-rotator">
+        <div class="container">
+          <p id="quote-text"></p>
+          <p id="quote-author"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>🌍 Destination of the Day</h2>
+          <div class="dotd-card">
+            <img id="dotd-img" src="" alt="">
+            <div class="dotd-info">
+              <h3 id="dotd-name"></h3>
+              <p id="dotd-country"></p>
+              <p id="dotd-desc"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3>🌴 TravelNest</h3>
+            <p>Your ultimate travel planning companion.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="budget.html">Budget Planner</a></li>
+            <li><a href="generator.html">Trip Generator</a></li>
+            <li><a href="mood.html">Travel Mood</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="footer-newsletter">
+            <h4>Stay inspired</h4>
+            <div class="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Your email address">
+              <button class="btn-newsletter" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+            <p id="newsletter-msg"></p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 TravelNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+    </script>
+  </body>
+</html>
